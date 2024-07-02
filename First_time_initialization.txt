@@ -1,0 +1,10 @@
+picow esp32 s3 board
+we want to use Arduino for programming picow.
+first go to: https://docs.banana-pi.org/en/BPI-Centi-S3/Arduino/Environment   or Or select BPI-Leaf-S3 board from Tools > Board menu, its default settings can be used directly.
+then by following the instructions you need to install.
+Now you need to go to TOOL>Board>Board manager  in textbox write Espressif then for version select 3.0.0 there is a problem with version 3.0.2 then select install.
+
+for first example: https://bpi-steam.com/PicoW_S3_doc/en/Arduino/Basic.html 
+in this page there are some project to test and if your board has a bootloader the instructions in this page will help you to load your program.
+
+Good luck
