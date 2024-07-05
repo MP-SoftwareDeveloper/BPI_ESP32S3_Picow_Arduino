@@ -1,12 +1,29 @@
 
-void setup()
-{
-  Serial.begin(921600); //Set serial communication baud rate
-}
-void loop()
-{
-  static unsigned long i = 0; //define variable i
-  Serial.println(i++); //output i after adding one
-  delay(1000); // delay 1 second
+#define LED LED_BUILTIN
+// #define LED 5
+
+void setup() {
+  pinMode(LED, OUTPUT);
+  digitalWrite(LED, LOW);
+
+  Serial.begin(115200);
+  Serial.println("Start blinky");
 }
 
+void loop() {
+  ledON();
+  delay(200);
+
+  ledOFF();
+  delay(200);
+}
+
+void ledON() {
+  Serial.println("LED ON");
+  digitalWrite(LED, LOW);
+}
+
+void ledOFF() {
+  Serial.println("LED OFF");
+  digitalWrite(LED, HIGH);
+}
